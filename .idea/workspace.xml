@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../RestAssuredFundamentals" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../eom_int" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../gatling-fundamentals" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../Tools/Gatling/VideoGameDB-master" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../gatling-dse-plugin" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+</project>
