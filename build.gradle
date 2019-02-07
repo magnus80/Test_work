@@ -7,8 +7,6 @@ plugins {
 group 'at'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-
 repositories {
     jcenter()
 }
@@ -17,6 +15,7 @@ ext {
     testNGVersion = '6.14.3'
     restAssuredVersion = '3.3.0'
     allureRestAssuredVersion = '2.9.0'
+    logbackVersion='1.2.3'
 }
 
 dependencies {
@@ -33,10 +32,8 @@ dependencies {
 
     implementation 'org.apache.commons:commons-lang3:3.8.1'
 
-    compile('org.testng:testng:6.14.3',
-            'io.github.sskorol:test-data-supplier:1.7.0'
-    )
-    listener -> io.github.sskorol.dataprovider.DataProviderTransformer
+
+    //listener -> io.github.sskorol.dataprovider.DataProviderTransformer
 }
 
 allure {
@@ -44,7 +41,6 @@ allure {
     aspectjweaver = true
     autoconfigure = true
 }
-
 
 test {
     useTestNG()

@@ -1,12 +1,14 @@
 package work;
 
-import io.restassured.RestAssured;
 import org.testng.annotations.BeforeSuite;
+
+import static io.restassured.RestAssured.baseURI;
 
 public class BaseTest {
 
     @BeforeSuite
     public void setUp() {
-        RestAssured.baseURI = "http://localhost:28080/rs/users";
+        baseURI = "http://localhost:28080/rs/users";
+
     }
 }

@@ -7,6 +7,9 @@ import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 
 public class TestData {
 
+    private TestData() {
+    }
+
     public static User getCorrectUser() {
         Faker faker = new Faker();
         return new User()
@@ -16,8 +19,8 @@ public class TestData {
 
     public static User getLongNameUser() {
         return new User()
-                .setFirstName(randomAlphabetic(255))
-                .setLastName(randomAlphabetic(255));
+                .setFirstName(randomAlphabetic(9999999))
+                .setLastName(randomAlphabetic(9999999));
     }
 
     public static User getEmptyFirstNameUser() {
@@ -29,8 +32,13 @@ public class TestData {
     public static User getEmptyLastNameUser() {
         return new User()
                 .setFirstName(randomAlphabetic(255))
-                .setLastName("");
+                .setLastName(null);
     }
 
+    public static User getEmptyUser() {
+        return new User()
+                .setFirstName(null)
+                .setLastName(null);
+    }
 
 }

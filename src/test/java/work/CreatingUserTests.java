@@ -1,27 +1,28 @@
 package work;
 
-import com.sun.tools.xjc.reader.xmlschema.bindinfo.BIConversion;
-import io.github.sskorol.core.DataSupplier;
-import one.util.streamex.StreamEx;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import rs.entity.User;
+import rs.service.UserApiService;
+
+import static rs.TestData.*;
 
 public class CreatingUserTests extends BaseTest {
 
     private UserApiService userApiService = new UserApiService();
 
-    @DataSupplier(transpose = true)
-    public List<User> getDifferentUsers() {
-        return StreamEx.of(
-                getCorrectUser(),
-                getLongNameUser(),
-                getEmptyFirstNameUser(),
-                getEmptyLastNameUser(),
-                new BIConversion.User().setFirstName("").setLastName(""))
-                .toList();
+    @DataProvider
+    public Object[][] getData() {
+        return new Object[][]{
+                {getLongNameUser()},
+                {getEmptyFirstNameUser()},
+                {getEmptyLastNameUser()},
+                {getEmptyUser()}
+        };
     }
 
-    @Test(description = "", dataProvider = "getDifferentUsers")
+    @Test(description = "Creating different types of users", dataProvider = "getData")
     public void testCanCreateCorrectUser(User user) {
-        userApiService.addUser(getCorrectUser());
+        userApiService.addUser(user);
     }
 }
