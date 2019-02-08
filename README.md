@@ -8,7 +8,7 @@ This project covers by tests example web application.
 3. Open current test project
 4. Make sure you have Lombok plugin installed and processing annotations is switched on
  (see https://www.jetbrains.com/help/idea/compiler-annotation-processors.html) 
-5. in terminal type **gradlew clean testApis** (**./gradlew clean testApis** for Mac and Linux) or
+5. In terminal type **gradlew clean testApis** in Windows (**./gradlew clean testApis** for Mac and Linux) or
  call **testApis** task from gradle right panel
 6. After finishing tests call allureServe task  from gradle right panel
     
