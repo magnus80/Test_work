@@ -2,7 +2,7 @@
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 P
- src/test/java/work/BaseTest.java,8\f\8f0a6b42df2c0b56a345486529798c482fbbc442
+ src/test/java/work/BaseTest.java,8/f/8f0a6b42df2c0b56a345486529798c482fbbc442
 Y
 )src/main/java/rs/condition/Condition.java,c\5\c51f4ef14de297ca3bd63e9606a777226ffb0d1a
 Z
@@ -16,19 +16,19 @@ b
 N
 src/main/java/rs/TestData.java,9\b\9b398f41f7184ccf6b77198a6cbeb9dbf03822c5
 Q
-!src/main/java/rs/ApiResponse.java,c\6\c66e23eced926403b677cd8aceef97a3bfd652ae
+!src/main/java/rs/ApiResponse.java,c/6/c66e23eced926403b677cd8aceef97a3bfd652ae
 <
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 \
-,src/main/java/rs/service/UserApiService.java,1\4\14011c2b409ad2945e83f430ef2d91261c41d905
+,src/main/java/rs/service/UserApiService.java,1/4/14011c2b409ad2945e83f430ef2d91261c41d905
 \
-,src/test/java/work/GettingAllUsersTests.java,c\4\c49acb8495207a8a503f7b4b23973fc33e7b46e4
+,src/test/java/work/GettingAllUsersTests.java,c/4/c49acb8495207a8a503f7b4b23973fc33e7b46e4
 Y
-)src/test/java/work/CreatingUserTests.java,1\8\18342a41bd10f7aa027ee70b45c26e141d761472
+)src/test/java/work/CreatingUserTests.java,1/8/18342a41bd10f7aa027ee70b45c26e141d761472
 Y
-)src/test/java/work/DeletingUserTests.java,a\a\aadcf874ec8b1b51b10a6d9a168f309a26f8c829
+)src/test/java/work/DeletingUserTests.java,a/a/aadcf874ec8b1b51b10a6d9a168f309a26f8c829
 Y
-)src/test/java/work/UpdatingUserTests.java,5\e\5e7cd06d2f719a8f08d8a202d03b8b2239553490
+)src/test/java/work/UpdatingUserTests.java,5/e/5e7cd06d2f719a8f08d8a202d03b8b2239553490
 _
 /src/main/java/rs/dataBase/queries/DBChecks.java,d\e\decd3af8e2ded5d0413b0aa507f5490a6a1ee4fa
 _
@@ -36,8 +36,10 @@ _
 X
 (src/main/java/rs/dataBase/Connector.java,8\2\828485453494e05ed208922f1925662f2c6c2043
 \
-,src/test/java/work/GettingUserByIdTests.java,9\5\957b1ce9bb18327dcf8eccdf09e7beba1f326dd1
+,src/test/java/work/GettingUserByIdTests.java,9/5/957b1ce9bb18327dcf8eccdf09e7beba1f326dd1
 9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+R
+"src/test/resources/testng-APIs.xml,c/4/c46a16c8086fbeb642f166bb78ddaf3d123ada9d

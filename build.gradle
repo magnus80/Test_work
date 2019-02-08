@@ -44,7 +44,6 @@ allure {
 
 test {
     useTestNG()
-    //ignoreFailures = true
 }
 
 task testApis(type: Test) {

@@ -15,16 +15,6 @@ public class CreatingUserTests extends BaseTest {
 
     private UserApiService userApiService = new UserApiService();
 
-    @DataProvider
-    public Object[][] getData() {
-        return new Object[][]{
-                {getLongNameUser()},
-                {getEmptyFirstNameUser()},
-                {getEmptyLastNameUser()},
-                {getEmptyUser()}
-        };
-    }
-
     @Test(description = "Creating different types of users", dataProvider = "getData")
     public void testCanCreateCorrectUser(User user) {
         ApiResponse response = userApiService.addUser(user);

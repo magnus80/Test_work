@@ -26,7 +26,7 @@ public class UpdatingUserTests extends BaseTest {
         }
     }
 
-    @Test(description = "Can update user with correct id")
+    @Test(description = "Can update user with correct id", dataProvider = "getData")
     public void testCanDeleteCorrectUser() {
         ApiResponse response = userApiService.updateUser(userId);
         response.shouldHave(statusCode(200));
