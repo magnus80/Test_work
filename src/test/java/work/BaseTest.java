@@ -16,12 +16,8 @@ public class BaseTest {
     @BeforeSuite
     public void setUp() {
         baseURI = "http://localhost:28080/rs/users";
-        if (userApiService.getAllUsers().getBodyField("ID").isEmpty()) {
-            ApiResponse response = userApiService.addUser(getCorrectUser());
-            response.shouldHave(statusCode(200));
-            // userId = parseInt(response.getBodyField("ID").get(0));
-        }
 
+        // userId = parseInt(response.getBodyField("ID").get(0))
     }
 
     @DataProvider

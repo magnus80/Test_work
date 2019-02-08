@@ -25,8 +25,13 @@ public class ApiResponse {
         return response.as(aClass);
     }
 
+    public int getBodySize(){
+        return response.getBody().asString().length();
+    }
+
     public String getBodyField(String jsonPath) {
         return response.getBody().jsonPath().get(jsonPath).toString();
+
     }
 
 }

@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import rs.ApiResponse;
 import rs.service.UserApiService;
 
-import static java.lang.Integer.parseInt;
 import static rs.TestData.getCorrectUser;
 import static rs.condition.Conditions.statusCode;
 
@@ -19,16 +18,18 @@ public class UpdatingUserTests extends BaseTest {
 
     @BeforeClass
     public void setUp() {
-        if (userApiService.getAllUsers().getBodyField("ID").isEmpty()) {
+        if (0 == userApiService.getAllUsers().getBodySize()) {
             ApiResponse response = userApiService.addUser(getCorrectUser());
             response.shouldHave(statusCode(200));
-           // userId = parseInt(response.getBodyField("ID").get(0));
         }
     }
 
-    @Test(description = "Can update user with correct id", dataProvider = "getData")
+    /**
+     *
+     */
+    @Test(description = "Can update user with correct id", alwaysRun = false)
     public void testCanDeleteCorrectUser() {
-        ApiResponse response = userApiService.updateUser(userId);
+        ApiResponse response = userApiService.deleteUser(userId);
         response.shouldHave(statusCode(200));
     }
 

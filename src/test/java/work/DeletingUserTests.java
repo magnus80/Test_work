@@ -1,6 +1,7 @@
 package work;
 
 import io.qameta.allure.Story;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import rs.ApiResponse;
 import rs.service.UserApiService;
@@ -15,14 +16,14 @@ public class DeletingUserTests extends BaseTest {
     private int userId;
     private static final int INCORRECT_ID = 4545;
 
-   /* @BeforeClass
+    @BeforeClass
     public void setUp() {
-        if (userApiService.getAllUsers().getBodyField("ID").isEmpty()) {
+        if (0 == userApiService.getAllUsers().getBodySize()) {
             ApiResponse response = userApiService.addUser(getCorrectUser());
             response.shouldHave(statusCode(200));
             //userId = parseInt(response.getBodyField("ID").get(0).toString());
         }
-    }*/
+    }
 
     @Test(description = "Can delete user with correct id", dataProvider = "getData")
     public void testCanDeleteCorrectUser() {

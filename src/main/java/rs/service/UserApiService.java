@@ -47,6 +47,20 @@ public class UserApiService {
         return new ApiResponse(response);
     }
 
+    @Step("Registering user with empty body")
+    public ApiResponse addUserWithEmptyBody() {
+        log.info("Registering user with empty body");
+
+        Response response = given()
+                .body("")
+                .when()
+                .post()
+                .then()
+                .extract().response();
+        return new ApiResponse(response);
+    }
+
+
     @Step("Deleting user with id {0}")
     public ApiResponse deleteUser(int userId) {
         log.info("Deleting user with id {}", userId);
