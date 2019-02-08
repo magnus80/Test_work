@@ -25,3 +25,19 @@ Q
 ,src/test/java/work/GettingAllUsersTests.java,c\4\c49acb8495207a8a503f7b4b23973fc33e7b46e4
 Y
 )src/test/java/work/CreatingUserTests.java,1\8\18342a41bd10f7aa027ee70b45c26e141d761472
+Y
+)src/test/java/work/DeletingUserTests.java,a\a\aadcf874ec8b1b51b10a6d9a168f309a26f8c829
+Y
+)src/test/java/work/UpdatingUserTests.java,5\e\5e7cd06d2f719a8f08d8a202d03b8b2239553490
+_
+/src/main/java/rs/dataBase/queries/DBChecks.java,d\e\decd3af8e2ded5d0413b0aa507f5490a6a1ee4fa
+_
+/src/main/java/rs/dataBase/HelperForQueries.java,b\5\b5e1cf479bec2daa73eb5a201ed9a94548f2df82
+X
+(src/main/java/rs/dataBase/Connector.java,8\2\828485453494e05ed208922f1925662f2c6c2043
+\
+,src/test/java/work/GettingUserByIdTests.java,9\5\957b1ce9bb18327dcf8eccdf09e7beba1f326dd1
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4

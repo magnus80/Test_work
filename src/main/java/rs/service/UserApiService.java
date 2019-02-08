@@ -36,7 +36,7 @@ public class UserApiService {
 
     @Step("Registering user {0}")
     public ApiResponse addUser(User user) {
-        log.info("Registering user {}");
+        log.info("Registering user {}", user);
 
         Response response = given()
                 .body(user)
@@ -47,10 +47,21 @@ public class UserApiService {
         return new ApiResponse(response);
     }
 
-
     @Step("Deleting user with id {0}")
     public ApiResponse deleteUser(int userId) {
-        log.info("Deleting user with id {}");
+        log.info("Deleting user with id {}", userId);
+
+        Response response = given()
+                .when()
+                .delete(format("/%d", userId))
+                .then()
+                .extract().response();
+        return new ApiResponse(response);
+    }
+
+    @Step("Updating user with id {0}")
+    public ApiResponse updateUser(int userId) {
+        log.info("Updating user with id {}", userId);
 
         Response response = given()
                 .when()
@@ -67,6 +78,18 @@ public class UserApiService {
         Response response = given()
                 .when()
                 .get()
+                .then()
+                .extract().response();
+        return new ApiResponse(response);
+    }
+
+    @Step("Getting user by Id")
+    public ApiResponse getUserById(int userId) {
+        log.info("Getting all existing users");
+
+        Response response = given()
+                .when()
+                .get(format("/%d", userId))
                 .then()
                 .extract().response();
         return new ApiResponse(response);

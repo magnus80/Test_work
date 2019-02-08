@@ -10,7 +10,7 @@ public class BodyFieldCondition extends Condition {
     private String jsonPath;
     private Matcher matcher;
 
-    public BodyFieldCondition(String jsonPath, Matcher matcher) {
+    BodyFieldCondition(String jsonPath, Matcher matcher) {
         this.jsonPath = jsonPath;
         this.matcher = matcher;
     }

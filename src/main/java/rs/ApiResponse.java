@@ -2,6 +2,7 @@ package rs;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 import lombok.extern.slf4j.Slf4j;
 import rs.condition.Condition;
 
@@ -16,7 +17,6 @@ public class ApiResponse {
 
     @Step("Response should have {0}")
     public void shouldHave(Condition condition) {
-        //response.log.info("Api response should have {}", condition);
 
         condition.check(response);
     }

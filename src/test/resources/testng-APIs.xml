@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Gradle Suite">
+    <test name="Test work test">
+        <classes>
+            <class name="work.CreatingUserTests"/>
+            <class name="work.GettingAllUsersTests"/>
+            <class name="work.GettingUserByIdTests"/>
+            <class name="work.UpdatingUserTests"/>
+            <class name="work.DeletingUserTests"/>
+        </classes>
+    </test>
+</suite>
