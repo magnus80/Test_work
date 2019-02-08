@@ -91,7 +91,7 @@ public class UserApiService {
 
         Response response = given()
                 .when()
-                .get()
+                .get("")
                 .then()
                 .extract().response();
         return new ApiResponse(response);

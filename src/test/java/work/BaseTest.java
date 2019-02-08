@@ -2,12 +2,10 @@ package work;
 
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
-import rs.ApiResponse;
 import rs.service.UserApiService;
 
 import static io.restassured.RestAssured.baseURI;
 import static rs.TestData.*;
-import static rs.condition.Conditions.statusCode;
 
 public class BaseTest {
 
@@ -16,12 +14,11 @@ public class BaseTest {
     @BeforeSuite
     public void setUp() {
         baseURI = "http://localhost:28080/rs/users";
-
         // userId = parseInt(response.getBodyField("ID").get(0))
     }
 
     @DataProvider
-    public Object[][] getData() {
+    public Object[][] getUserData() {
         return new Object[][]{
                 {getLongNameUser()},
                 {getEmptyFirstNameUser()},
@@ -29,4 +26,14 @@ public class BaseTest {
                 {getEmptyUser()}
         };
     }
+
+    @DataProvider
+    public Object[][] getUserIds() {
+        return new Object[][]{
+                {2},
+                {2342342},
+                {-1}
+        };
+    }
+
 }

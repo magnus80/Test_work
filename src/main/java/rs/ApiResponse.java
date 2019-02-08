@@ -2,7 +2,6 @@ package rs;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
 import lombok.extern.slf4j.Slf4j;
 import rs.condition.Condition;
 
@@ -25,8 +24,9 @@ public class ApiResponse {
         return response.as(aClass);
     }
 
-    public int getBodySize(){
-        return response.getBody().asString().length();
+    public int getBodySize() {
+        int wer = response.getBody().asString().length();
+        return wer;
     }
 
     public String getBodyField(String jsonPath) {

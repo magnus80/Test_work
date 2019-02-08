@@ -13,8 +13,6 @@ import static rs.condition.Conditions.statusCode;
 public class UpdatingUserTests extends BaseTest {
 
     private UserApiService userApiService = new UserApiService();
-    private int userId;
-    private static final int INCORRECT_ID = 45565656;
 
     @BeforeClass
     public void setUp() {
@@ -27,15 +25,10 @@ public class UpdatingUserTests extends BaseTest {
     /**
      *
      */
-    @Test(description = "Can update user with correct id", alwaysRun = false)
-    public void testCanDeleteCorrectUser() {
-        ApiResponse response = userApiService.deleteUser(userId);
+    @Test(description = "Can update user with correct id", dataProvider = "getUserIds")
+    public void testCanDeleteCorrectUser(int id) {
+        ApiResponse response = userApiService.deleteUser(id);
         response.shouldHave(statusCode(200));
     }
 
-    @Test(description = "Can update user with incorrect id")
-    public void testCanDeleteIncorrectUser() {
-        ApiResponse response = userApiService.updateUser(INCORRECT_ID);
-        response.shouldHave(statusCode(200));
-    }
 }
